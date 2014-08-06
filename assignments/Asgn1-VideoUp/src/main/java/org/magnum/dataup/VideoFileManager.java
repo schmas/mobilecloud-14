@@ -17,6 +17,9 @@
  */
 package org.magnum.dataup;
 
+import org.magnum.dataup.model.Video;
+import org.springframework.stereotype.Component;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,8 +29,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-import org.magnum.dataup.model.Video;
-
 /**
  * This class provides a simple implementation to store video binary
  * data on the file system in a "videos" folder. The class provides
@@ -36,29 +37,30 @@ import org.magnum.dataup.model.Video;
  * @author jules
  *
  */
+@Component
 public class VideoFileManager {
 
-	/**
-	 * This static factory method creates and returns a 
-	 * VideoFileManager object to the caller. Feel free to customize
-	 * this method to take parameters, etc. if you want.
-	 * 
-	 * @return
-	 * @throws IOException
-	 */
-	public static VideoFileManager get() throws IOException {
-		return new VideoFileManager();
-	}
-	
-	private Path targetDir_ = Paths.get("videos");
-	
-	// The VideoFileManager.get() method should be used
-	// to obtain an instance
-	private VideoFileManager() throws IOException{
-		if(!Files.exists(targetDir_)){
-			Files.createDirectories(targetDir_);
-		}
-	}
+    private Path targetDir_ = Paths.get("videos");
+
+    // The VideoFileManager.get() method should be used
+    // to obtain an instance
+    private VideoFileManager() throws IOException {
+        if (!Files.exists(targetDir_)) {
+            Files.createDirectories(targetDir_);
+        }
+    }
+
+    /**
+     * This static factory method creates and returns a
+     * VideoFileManager object to the caller. Feel free to customize
+     * this method to take parameters, etc. if you want.
+     *
+     * @return
+     * @throws IOException
+     */
+    public static VideoFileManager get() throws IOException {
+        return new VideoFileManager();
+    }
 	
 	// Private helper method for resolving video file paths
 	private Path getVideoPath(Video v){

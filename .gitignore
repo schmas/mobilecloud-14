@@ -11,4 +11,8 @@ build
 .private
 .idea
 *.iml
+classes
+out
+gradle/
+gradlew*
 coursera-submission
