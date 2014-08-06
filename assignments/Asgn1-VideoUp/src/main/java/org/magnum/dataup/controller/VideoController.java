@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Collection;
+
 /**
- * Created by dceschmidt on 05/08/14.
+ * @author Diego Schmidt
  */
 @Controller
 public class VideoController {
@@ -22,8 +24,14 @@ public class VideoController {
     public
     @ResponseBody
     Video addVideo(@RequestBody Video v) {
-        final Video savedVideo = repository.save(v);
-        return savedVideo;
+        return repository.save(v);
+    }
+
+    @RequestMapping(value = "/video", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    Collection<Video> getVideos() {
+        return repository.getVideos();
     }
 
 }

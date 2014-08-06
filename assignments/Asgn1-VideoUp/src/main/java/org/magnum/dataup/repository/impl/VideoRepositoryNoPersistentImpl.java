@@ -9,6 +9,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
@@ -31,6 +32,11 @@ public class VideoRepositoryNoPersistentImpl implements VideoRepository {
         video.setDataUrl(getDataUrl(video.getId()));
         videos.put(video.getId(), video);
         return video;
+    }
+
+    @Override
+    public Collection<Video> getVideos() {
+        return videos.values();
     }
 
     private void checkAndSetId(Video entity) {
