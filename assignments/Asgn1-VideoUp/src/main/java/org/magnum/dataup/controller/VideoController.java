@@ -6,15 +6,18 @@ import org.magnum.dataup.repository.VideoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Collection;
 
 /**
@@ -29,23 +32,17 @@ public class VideoController {
     private VideoRepository repository;
 
     @RequestMapping(value = "/video", method = RequestMethod.POST)
-    public
-    @ResponseBody
-    Video addVideo(@RequestBody Video v) {
+    public @ResponseBody Video addVideo(@RequestBody Video v) {
         return repository.save(v);
     }
 
     @RequestMapping(value = "/video", method = RequestMethod.GET)
-    public
-    @ResponseBody
-    Collection<Video> getVideos() {
+    public @ResponseBody Collection<Video> getVideos() {
         return repository.getVideos();
     }
 
     @RequestMapping(value = "/video/{id}/data", method = RequestMethod.POST)
-    public
-    @ResponseBody
-    ResponseEntity<VideoStatus> uploadVideoFile(@PathVariable("id") long id,
+    public @ResponseBody ResponseEntity<VideoStatus> uploadVideoFile(@PathVariable("id") long id,
                                                 @RequestParam("data") MultipartFile file) {
 
         if (!file.isEmpty()) {
@@ -67,23 +64,24 @@ public class VideoController {
 
 
     @RequestMapping(value = "/video/{id}/data", method = RequestMethod.GET)
-    public void getVideoFile(@PathVariable("id") long id, HttpServletResponse response) throws IOException {
+    public @ResponseBody ResponseEntity<byte[]> getVideoFile(@PathVariable("id") long id) {
 
         try {
             final Video video = repository.getVideo(id);
             if (repository.hasVideoData(video)) {
 
-                response.setContentType("video/mpeg");
-                repository.copyVideoData(video, response.getOutputStream());
-                response.flushBuffer();
-            } else {
-                response.sendError(HttpServletResponse.SC_NOT_FOUND);
+                final Path file = repository.getFile(video);
+
+                final HttpHeaders headers = new HttpHeaders();
+                headers.setContentType(MediaType.parseMediaType("video/mpeg"));
+                headers.setContentLength(file.toFile().length());
+                headers.setContentDispositionFormData("attachment", file.getFileName().toString());
+                return new ResponseEntity<>(Files.readAllBytes(file), headers, HttpStatus.OK);
             }
         } catch (Exception e) {
             LOG.error("ERROR", e);
-            response.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
-
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
 }

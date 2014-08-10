@@ -4,6 +4,7 @@ import org.magnum.dataup.model.Video;
 
 import javax.servlet.ServletOutputStream;
 import java.io.InputStream;
+import java.nio.file.Path;
 import java.util.Collection;
 
 /**
@@ -23,4 +24,6 @@ public interface VideoRepository {
     boolean hasVideoData(Video video);
 
     void copyVideoData(Video video, ServletOutputStream outputStream);
+
+    Path getFile(Video video);
 }

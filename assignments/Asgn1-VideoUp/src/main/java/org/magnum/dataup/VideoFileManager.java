@@ -63,7 +63,7 @@ public class VideoFileManager {
     }
 	
 	// Private helper method for resolving video file paths
-	private Path getVideoPath(Video v){
+	public Path getVideoPath(Video v){
 		assert(v != null);
 		
 		return targetDir_.resolve("video"+v.getId()+".mpg");

@@ -12,6 +12,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Path;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -71,6 +72,11 @@ public class MemoryPersistentVideoRepositoryImpl implements VideoRepository {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public Path getFile(final Video video) {
+        return videoFileManager.getVideoPath(video);
     }
 
     private void checkAndSetId(Video entity) {
