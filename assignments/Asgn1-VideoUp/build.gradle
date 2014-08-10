@@ -1,14 +1,15 @@
 buildscript {
-	ext {
-		springBootVersion = '1.0.2.RELEASE'
-		awsSDKVersion = '1.7.12'
-	}
+    ext {
+        springBootVersion = '1.0.2.RELEASE'
+        awsSDKVersion = '1.7.12'
+    }
     repositories {
         maven { url "http://repo.spring.io/libs-snapshot" }
         mavenLocal()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
+        classpath 'org.springframework:springloaded:1.2.0.RELEASE'
     }
 }
 
@@ -18,19 +19,18 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'war'
 
-sourceCompatibility = 1.7
-
 compileJava {
-	targetCompatibility = 1.7
+    targetCompatibility = 1.7
+    sourceCompatibility = 1.7
 }
 
 war {
     baseName = 'gs-convert-jar-to-war'
-    version =  '0.1.0'
+    version = '0.1.0'
 }
 
 repositories {
-	jcenter()
+    jcenter()
     maven { url "http://repo.spring.io/libs-snapshot" }
     maven { url "http://maven.springframework.org/milestone" }
 
@@ -66,4 +66,11 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.11'
+}
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
 }

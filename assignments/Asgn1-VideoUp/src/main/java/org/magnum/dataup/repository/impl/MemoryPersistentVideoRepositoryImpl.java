@@ -8,7 +8,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,11 +22,13 @@ import java.util.concurrent.atomic.AtomicLong;
  * @sinnce 05/08/14
  */
 @Repository
-public class VideoRepositoryNoPersistentImpl implements VideoRepository {
+public class MemoryPersistentVideoRepositoryImpl implements VideoRepository {
 
     private static final AtomicLong currentId = new AtomicLong(0L);
+
     @Autowired
     private VideoFileManager videoFileManager;
+
     private Map<Long, Video> videos = new HashMap<>();
 
     @Override
@@ -39,6 +44,35 @@ public class VideoRepositoryNoPersistentImpl implements VideoRepository {
         return videos.values();
     }
 
+    @Override
+    public Video getVideo(long id) {
+        return videos.get(id);
+    }
+
+    @Override
+    public Video saveVideoData(final Video video, final InputStream inputStream) {
+        try {
+            videoFileManager.saveVideoData(video, inputStream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return video;
+    }
+
+    @Override
+    public boolean hasVideoData(final Video video) {
+        return videoFileManager.hasVideoData(video);
+    }
+
+    @Override
+    public void copyVideoData(final Video video, final ServletOutputStream outputStream) {
+        try {
+            videoFileManager.copyVideoData(video, outputStream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private void checkAndSetId(Video entity) {
         if (entity.getId() == 0) {
             entity.setId(currentId.incrementAndGet());
@@ -46,8 +80,7 @@ public class VideoRepositoryNoPersistentImpl implements VideoRepository {
     }
 
     private String getDataUrl(long videoId) {
-        String url = getUrlBaseForLocalServer() + "/video/" + videoId + "/data";
-        return url;
+        return getUrlBaseForLocalServer() + "/video/" + videoId + "/data";
     }
 
     private String getUrlBaseForLocalServer() {
