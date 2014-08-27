@@ -228,6 +228,8 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
+    <file type="web" url="file://$PROJECT_DIR$/../../examples/5-VideoControllerWithJpa" />
+    <file type="web" url="file://$PROJECT_DIR$/../../examples/6-VideoServiceWithDataRest" />
     <file type="web" url="file://$PROJECT_DIR$/../../examples/9-VideoServiceWithOauth2" />
     <type id="Spring" />
   </component>
@@ -243,7 +245,25 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="distributionType" value="WRAPPED" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../../examples/5-VideoControllerWithJpa" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../../examples/5-VideoControllerWithJpa" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../../examples/6-VideoServiceWithDataRest" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../../examples/6-VideoServiceWithDataRest" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/../../examples/9-VideoServiceWithOauth2" />
         <option name="modules">
           <set>
@@ -406,6 +426,9 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../examples/5-VideoControllerWithJpa/5-VideoControllerWithJpa.iml" filepath="$PROJECT_DIR$/../../examples/5-VideoControllerWithJpa/5-VideoControllerWithJpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../examples/6-VideoServiceWithDataRest/6-VideoServiceWithDataRest.iml" filepath="$PROJECT_DIR$/../../examples/6-VideoServiceWithDataRest/6-VideoServiceWithDataRest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../examples/9-VideoServiceWithOauth2/9-VideoServiceWithOauth2.iml" filepath="$PROJECT_DIR$/../../examples/9-VideoServiceWithOauth2/9-VideoServiceWithOauth2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Asgn2-VideoLike.iml" filepath="$PROJECT_DIR$/Asgn2-VideoLike.iml" />
     </modules>
   </component>
@@ -417,6 +440,23 @@
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
@@ -481,6 +521,15 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.0.0/da0cec0cf5fa28fba22e44700d72259e0225f2e4/classmate-1.0.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: com.sun.el-2.2.0.v201108011116">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/com.sun.el/2.2.0.v201108011116/15f7774c3fa514835a371f47c152317704ea411a/com.sun.el-2.2.0.v201108011116.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/com.sun.el/2.2.0.v201108011116/bfd5972fdc9c7e7d08376f09b36b9b6a9d89ff5/com.sun.el-2.2.0.v201108011116-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: commons-beanutils-1.9.2">
@@ -589,6 +638,15 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/17.0/7ca0efbeb87ca845b5d7a0ac9c21a4b7b95f7b28/guava-17.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: h2-1.3.175">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.h2database/h2/1.3.175/408ed316edddbce6db031c6bdceee73a09647d9e/h2-1.3.175.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.h2database/h2/1.3.175/fc4555925945f7fb3153a4ca3d94d34d3f33b713/h2-1.3.175-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: hamcrest-core-1.3">
@@ -789,6 +847,42 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.18.1-GA/d8d089f3a8845cce22d3006e02ab1403dd73b5b6/javassist-3.18.1-GA-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: javax.el-2.2.0.v201108011116">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.el/2.2.0.v201108011116/ec8944c11833d84b0283a5afbad0fafb264f86a9/javax.el-2.2.0.v201108011116.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.el/2.2.0.v201108011116/96fe4d05f5cbd5d4efd2aed9dbcbf002f4444e23/javax.el-2.2.0.v201108011116-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: javax.servlet-3.0.0.v201112011016">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet/3.0.0.v201112011016/aaaa85845fb5c59da00193f06b8e5278d8bf3f8/javax.servlet-3.0.0.v201112011016.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet/3.0.0.v201112011016/15c914135cf30177b83c321250c458396289cd37/javax.servlet-3.0.0.v201112011016-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: javax.servlet.jsp-2.2.0.v201112011158">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet.jsp/2.2.0.v201112011158/80b4ffe7c26ee97313bea2ddda5835fd38812ee4/javax.servlet.jsp-2.2.0.v201112011158.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet.jsp/2.2.0.v201112011158/3d1e4ebc9b2c2b203dd9a471ba75a3ed8a28eccc/javax.servlet.jsp-2.2.0.v201112011158-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: javax.servlet.jsp.jstl-1.2.0.v201105211821">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet.jsp.jstl/1.2.0.v201105211821/db594f1c8fc00d536f6d135bd7f8a9a99a6b8eea/javax.servlet.jsp.jstl-1.2.0.v201105211821.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet.jsp.jstl/1.2.0.v201105211821/3b9bbbf21e72c1e1feede7d74c4b9f619309713d/javax.servlet.jsp.jstl-1.2.0.v201105211821-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: jboss-logging-3.1.3.GA">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.1.3.GA/64499e907f19e5e1b3fdc02f81440c1832fe3545/jboss-logging-3.1.3.GA.jar!/" />
@@ -823,6 +917,96 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.7/b5a646b81b899e930f8600c5f45766dd82743d93/jcl-over-slf4j-1.7.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-continuation-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-continuation/8.1.14.v20131031/e3396abd21360191c2277e848eff489b58bba45d/jetty-continuation-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-continuation/8.1.14.v20131031/87a42f9cbee1691bd327fd7fe8c5e0c7c0bbc875/jetty-continuation-8.1.14.v20131031-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-http-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/8.1.14.v20131031/8dd4e01b374e16cf0335b7975a7aa0a57396d5da/jetty-http-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/8.1.14.v20131031/e49f6e1e709fef246a241bc8cf8bcf898c448544/jetty-http-8.1.14.v20131031-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-io-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/8.1.14.v20131031/12f6f92d7e58349501f2cfc0716b8f1c6a2962eb/jetty-io-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/8.1.14.v20131031/78f1cb7c9e32824705f4e52ea1c2179b31478a58/jetty-io-8.1.14.v20131031-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-jsp-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-jsp/8.1.14.v20131031/87dc1723a32113d74be2420d940f6825e3b6af42/jetty-jsp-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-jsp/8.1.14.v20131031/5fa93041c40c197d8982a317537a2a433ed7bc4b/jetty-jsp-8.1.14.v20131031-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-security-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-security/8.1.14.v20131031/d6fd7add8e6015a95558b67b43edf7752a925884/jetty-security-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-security/8.1.14.v20131031/2ee33e2a70acb7cfa09aff316b375ea058cae69a/jetty-security-8.1.14.v20131031-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-server-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/8.1.14.v20131031/7f7f9b929b9d9169dd68f36327c819ab9a03a661/jetty-server-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/8.1.14.v20131031/b1f30b0334e727b6962588e0ecf2a7c758dbcd11/jetty-server-8.1.14.v20131031-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-servlet-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlet/8.1.14.v20131031/2ea127b7001965201d28ce715f5754573205c4ae/jetty-servlet-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlet/8.1.14.v20131031/bfbe7a3c86283e3903f9c9ac7395781ba59bbf0d/jetty-servlet-8.1.14.v20131031-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-util-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/8.1.14.v20131031/43063284480a41eca024dc8852452eedf6379c16/jetty-util-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/8.1.14.v20131031/360ef955a9550053fc645f6c498fdf0cf9ae019f/jetty-util-8.1.14.v20131031-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-webapp-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-webapp/8.1.14.v20131031/1f29371c74381ac42f961e9b984a7af28cc62093/jetty-webapp-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-webapp/8.1.14.v20131031/eaf21068cf439046e060ae47da4fc46e77a079ff/jetty-webapp-8.1.14.v20131031-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: jetty-xml-8.1.14.v20131031">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-xml/8.1.14.v20131031/8732c74817fef6d2e3e667636e6c4f27fb4cada9/jetty-xml-8.1.14.v20131031.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-xml/8.1.14.v20131031/c9095bfb680cf8a749a26711bff8327e10596f33/jetty-xml-8.1.14.v20131031-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: jul-to-slf4j-1.7.7">
@@ -886,6 +1070,15 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/1.9.5/46f703fb4266140c544d48a189cb25947eb6333e/mockito-core-1.9.5-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: objenesis-1.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/1.0/9b473564e792c2bdf1449da1f0b1b5bff9805704/objenesis-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/1.0/b10c90e57b7bb985a7b6a704769428fe5c2a732c/objenesis-1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: objenesis-1.3">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/1.3/dc13ae4faca6df981fc7aeb5a522d9db446d5d50/objenesis-1.3.jar!/" />
@@ -902,6 +1095,33 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/611a57d836e2c320d59f9851d4ad587f3c8472e/objenesis-2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.jasper.glassfish-2.2.2.v201112011158">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/org.apache.jasper.glassfish/2.2.2.v201112011158/3945afe6a042228a92da320aec3fa1bc1308183b/org.apache.jasper.glassfish-2.2.2.v201112011158.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/org.apache.jasper.glassfish/2.2.2.v201112011158/87830aada7aa722d33067bba07a5e0f967875fde/org.apache.jasper.glassfish-2.2.2.v201112011158-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.apache.taglibs.standard.glassfish-1.2.0.v201112081803">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/org.apache.taglibs.standard.glassfish/1.2.0.v201112081803/2c4baa72af1d3aae3a1e029d4f8ca07498dabbe0/org.apache.taglibs.standard.glassfish-1.2.0.v201112081803.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/org.apache.taglibs.standard.glassfish/1.2.0.v201112081803/f2702e293dd0cd8879c42a2c079bb0bc542d4b52/org.apache.taglibs.standard.glassfish-1.2.0.v201112081803-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.eclipse.jdt.core-3.7.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/org.eclipse.jdt.core/3.7.1/5b79bfee0852ca685e33cab74496fa3400271b5b/org.eclipse.jdt.core-3.7.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/org.eclipse.jdt.core/3.7.1/fcf9751ba022c340e2d01456462ea4949ceee991/org.eclipse.jdt.core-3.7.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: retrofit-1.6.0">
@@ -1127,6 +1347,15 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/1.1.5.RELEASE/56d5da66717b3f343e2c63bc3767629e44621b53/spring-boot-starter-jdbc-1.1.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: spring-boot-starter-jetty-1.0.2.RELEASE">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jetty/1.0.2.RELEASE/6f8da7ee1e540b2f21f99946ca74eb1726f2fd82/spring-boot-starter-jetty-1.0.2.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jetty/1.0.2.RELEASE/5cdce3e7a651b443253c11ae1e08d0b4c708b8fb/spring-boot-starter-jetty-1.0.2.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Gradle: spring-boot-starter-logging-1.0.2.RELEASE">

@@ -17,20 +17,21 @@ import org.springframework.security.oauth2.provider.client.ClientDetailsUserDeta
 /**
  * A class that combines a UserDetailsService and ClientDetailsService
  * into a single object.
- *
+ * 
  * @author jules
+ *
  */
 public class ClientAndUserDetailsService implements UserDetailsService,
-															ClientDetailsService {
+		ClientDetailsService {
 
 	private final ClientDetailsService clients_;
 
 	private final UserDetailsService users_;
-
+	
 	private final ClientDetailsUserDetailsService clientDetailsWrapper_;
 
 	public ClientAndUserDetailsService(ClientDetailsService clients,
-									   UserDetailsService users) {
+			UserDetailsService users) {
 		super();
 		clients_ = clients;
 		users_ = users;
@@ -42,14 +43,14 @@ public class ClientAndUserDetailsService implements UserDetailsService,
 			throws ClientRegistrationException {
 		return clients_.loadClientByClientId(clientId);
 	}
-
+	
 	@Override
 	public UserDetails loadUserByUsername(String username)
 			throws UsernameNotFoundException {
 		UserDetails user = null;
-		try {
+		try{
 			user = users_.loadUserByUsername(username);
-		} catch (UsernameNotFoundException e) {
+		}catch(UsernameNotFoundException e){
 			user = clientDetailsWrapper_.loadUserByUsername(username);
 		}
 		return user;
