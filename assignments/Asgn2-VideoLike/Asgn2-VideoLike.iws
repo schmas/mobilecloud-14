@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2174e9e-d7c7-44ec-8c96-5e82833b1b7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/json/ResourcesMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/repository/VideoRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/controller/VideoService.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/AnEmptyController.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/Application.java" afterPath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn2-VideoLike.ipr" afterPath="$PROJECT_DIR$/Asgn2-VideoLike.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asgn2-VideoLike.iws" afterPath="$PROJECT_DIR$/Asgn2-VideoLike.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/auth/ClientAndUserDetailsService.java" afterPath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/auth/ClientAndUserDetailsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/auth/OAuth2SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/auth/OAuth2SecurityConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/auth/User.java" afterPath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/auth/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/repository/Video.java" afterPath="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/repository/Video.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Asgn2-VideoLike.ipr" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Asgn2-VideoLike.iws" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
     </list>
     <ignored path="Asgn2-VideoLike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,11 +101,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AutoGradingTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AutoGradingTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/magnum/mobilecloud/integration/test/AutoGradingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39748955" vertical-offset="1405" max-vertical-offset="5670">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1405" max-vertical-offset="5670">
               <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5607477" vertical-offset="0" max-vertical-offset="428">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -1393,6 +1394,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/repository/VideoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/controller/VideoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/magnum/mobilecloud/video/Application.java" />
+        <option value="$PROJECT_DIR$/../../.gitignore" />
       </list>
     </option>
   </component>
@@ -1484,106 +1486,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Asgn2-VideoLike" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Asgn2-VideoLike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Asgn2-VideoLike" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mobilecloud" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Asgn2-VideoLike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Asgn2-VideoLike" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mobilecloud" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Asgn2-VideoLike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Asgn2-VideoLike" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Asgn2-VideoLike" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Asgn2-VideoLike" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="video" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2095,24 +1997,28 @@
       <created>1409097104722</created>
       <updated>1409097104722</updated>
       <workItem from="1409097105614" duration="1374000" />
-      <workItem from="1409098659554" duration="12488000" />
+      <workItem from="1409098659554" duration="12567000" />
     </task>
     <task id="LOCAL-00001" summary="Added OAuth v2 based on Jules example.">
       <created>1409102134723</created>
       <updated>1409102134723</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Removed Rest Repository to only expose a set of controlled methods.">
+      <created>1409112320231</created>
+      <updated>1409112320231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13862000" />
+    <option name="totallyTimeSpent" value="14052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5923664" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3038168" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2196,7 +2102,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Added OAuth v2 based on Jules example." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added OAuth v2 based on Jules example." />
+    <MESSAGE value="Removed Rest Repository to only expose a set of controlled methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Rest Repository to only expose a set of controlled methods." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2623,8 +2530,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/magnum/mobilecloud/integration/test/AutoGradingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39748955" vertical-offset="1405" max-vertical-offset="5670">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1405" max-vertical-offset="5670">
           <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5607477" vertical-offset="0" max-vertical-offset="428">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding />
         </state>
       </provider>

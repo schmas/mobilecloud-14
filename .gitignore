@@ -11,6 +11,8 @@ build
 .private
 .idea
 *.iml
+*.ipr
+*.iws
 classes
 out
 gradle/
