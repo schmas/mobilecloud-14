@@ -1,18 +1,17 @@
 package org.magnum.mobilecloud.video.repository;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.Sets;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 /**
  * A simple object to represent a video and its URL for viewing.
- * 
+ * <p/>
  * You probably need to, at a minimum, add some annotations to this
  * class.
- * 
+ * <p/>
  * You are free to add annotations, members, and methods to this
  * class. However, you probably should not change the existing
  * methods or member variables. If you do change them, you need
@@ -32,6 +31,8 @@ public class Video {
 	private String url;
 	private long duration;
 	private long likes;
+	@ElementCollection
+	private Set<String> likeUsers;
 
 	public Video() {
 	}
@@ -84,10 +85,32 @@ public class Video {
 		this.likes = likes;
 	}
 
+	public boolean like(final String user) {
+		final boolean added = getLikeUsers().add(user);
+		if (added) {
+			likes++;
+		}
+		return added;
+	}
+
+	public boolean unlike(final String user) {
+		final boolean removed = getLikeUsers().remove(user);
+		if (removed) {
+			likes--;
+		}
+		return removed;
+	}
+
+	public Set<String> getLikeUsers() {
+		if (likeUsers == null) {
+			likeUsers = Sets.newHashSet();
+		}
+		return likeUsers;
+	}
+
 	/**
 	 * Two Videos will generate the same hashcode if they have exactly the same
 	 * values for their name, url, and duration.
-	 * 
 	 */
 	@Override
 	public int hashCode() {
@@ -98,7 +121,6 @@ public class Video {
 	/**
 	 * Two Videos are considered equal if they have exactly the same values for
 	 * their name, url, and duration.
-	 * 
 	 */
 	@Override
 	public boolean equals(Object obj) {
@@ -106,8 +128,8 @@ public class Video {
 			Video other = (Video) obj;
 			// Google Guava provides great utilities for equals too!
 			return Objects.equal(name, other.name)
-					&& Objects.equal(url, other.url)
-					&& duration == other.duration;
+						   && Objects.equal(url, other.url)
+						   && duration == other.duration;
 		} else {
 			return false;
 		}

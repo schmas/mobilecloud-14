@@ -1,58 +1,37 @@
 package org.magnum.mobilecloud.integration.test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 import io.magnum.autograder.junit.Rubric;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-
 import org.apache.http.HttpStatus;
 import org.junit.Test;
 import org.magnum.mobilecloud.video.TestData;
 import org.magnum.mobilecloud.video.client.SecuredRestBuilder;
 import org.magnum.mobilecloud.video.client.VideoSvcApi;
 import org.magnum.mobilecloud.video.repository.Video;
-
 import retrofit.ErrorHandler;
 import retrofit.RestAdapter;
 import retrofit.RestAdapter.LogLevel;
 import retrofit.RetrofitError;
 import retrofit.client.ApacheClient;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
+import static org.junit.Assert.*;
+
 /**
  * A test for the Asgn2 video service
- * 
+ *
  * @author mitchell
  */
 public class AutoGradingTest {
 
-	private class ErrorRecorder implements ErrorHandler {
-
-		private RetrofitError error;
-
-		@Override
-		public Throwable handleError(RetrofitError cause) {
-			error = cause;
-			return error.getCause();
-		}
-
-		public RetrofitError getError() {
-			return error;
-		}
-	}
-
 	private final String TEST_URL = "https://localhost:8443";
-
 	private final String USERNAME1 = "admin";
 	private final String USERNAME2 = "user0";
 	private final String PASSWORD = "pass";
 	private final String CLIENT_ID = "mobile";
-
 	private VideoSvcApi readWriteVideoSvcUser1 = new SecuredRestBuilder()
 			.setClient(new ApacheClient(UnsafeHttpsClient.createUnsafeClient()))
 			.setEndpoint(TEST_URL)
@@ -60,7 +39,6 @@ public class AutoGradingTest {
 			// .setLogLevel(LogLevel.FULL)
 			.setUsername(USERNAME1).setPassword(PASSWORD).setClientId(CLIENT_ID)
 			.build().create(VideoSvcApi.class);
-
 	private VideoSvcApi readWriteVideoSvcUser2 = new SecuredRestBuilder()
 			.setClient(new ApacheClient(UnsafeHttpsClient.createUnsafeClient()))
 			.setEndpoint(TEST_URL)
@@ -68,19 +46,17 @@ public class AutoGradingTest {
 			// .setLogLevel(LogLevel.FULL)
 			.setUsername(USERNAME2).setPassword(PASSWORD).setClientId(CLIENT_ID)
 			.build().create(VideoSvcApi.class);
-
 	private Video video = TestData.randomVideo();
 
-
-	@Rubric(value = "Video data is preserved", 
+	@Rubric(value = "Video data is preserved",
 			goal = "The goal of this evaluation is to ensure that your Spring controller(s) "
 			+ "properly unmarshall Video objects from the data that is sent to them "
 			+ "and that the HTTP API for adding videos is implemented properly. The"
 			+ " test checks that your code properly accepts a request body with"
 			+ " application/json data and preserves all the properties that are set"
 			+ " by the client. The test also checks that you generate an ID and data"
-			+ " URL for the uploaded video.", 
-			points = 20.0, 
+			+ " URL for the uploaded video.",
+			points = 20.0,
 			reference = "This test is derived from the material in these videos: "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/61 "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/97 "
@@ -94,12 +70,12 @@ public class AutoGradingTest {
 		assertTrue(received.getId() > 0);
 	}
 
-	@Rubric(value = "The list of videos is updated after an add", 
+	@Rubric(value = "The list of videos is updated after an add",
 			goal = "The goal of this evaluation is to ensure that your Spring controller(s) "
 			+ "can add videos to the list that is stored in memory on the server."
 			+ " The test also ensure that you properly return a list of videos"
-			+ " as JSON.", 
-			points = 20.0, 
+			+ " as JSON.",
+			points = 20.0,
 			reference = "This test is derived from the material in these videos: "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/61 "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/97 "
@@ -111,12 +87,12 @@ public class AutoGradingTest {
 		assertTrue(stored.contains(video));
 	}
 
-	@Rubric(value = "Requests without authentication token are denied.", 
+	@Rubric(value = "Requests without authentication token are denied.",
 			goal = "The goal of this evaluation is to ensure that your Spring application "
 			+ "properly authenticates queries using the OAuth Password Grant flow."
 			+ "Any query that does not contain the correct authorization token"
-			+ "should be denied with a 401 error.", 
-			points = 20.0, 
+			+ "should be denied with a 401 error.",
+			points = 20.0,
 			reference = "This test is derived from the material in these videos: "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/117 "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/127 "
@@ -146,17 +122,17 @@ public class AutoGradingTest {
 		}
 
 		// We should NOT get back the video that we added above!
-		Collection<Video> videos = readWriteVideoSvcUser1.getVideoList();
+		java.util.Collection<Video> videos = readWriteVideoSvcUser1.getVideoList();
 		assertFalse(videos.contains(video));
 	}
 
-	@Rubric(value = "A user can like/unlike a video and increment/decrement the like count", 
+	@Rubric(value = "A user can like/unlike a video and increment/decrement the like count",
 			goal = "The goal of this evaluation is to ensure that your Spring application "
 			+ "allows users to like/unlike videos using the /video/{id}/like endpoint, and"
 			+ "and the /video/{id}/unlike endpoint."
 			+ "Once a user likes/unlikes a video, the count of users that like that video"
-			+ "should be incremented/decremented.", 
-			points = 20.0, 
+			+ "should be incremented/decremented.",
+			points = 20.0,
 			reference = "This test is derived from the material in these videos: "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/99 "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/121 ")
@@ -185,13 +161,13 @@ public class AutoGradingTest {
 		assertTrue(v.getLikes() == 0);
 	}
 
-	@Rubric(value = "A user can like/unlike a video and be added to/removed from the \"liked by\" list.", 
+	@Rubric(value = "A user can like/unlike a video and be added to/removed from the \"liked by\" list.",
 			goal = "The goal of this evaluation is to ensure that your Spring application "
 			+ "allows users to like/unlike videos using the /video/{id}/like endpoint"
 			+ "and the /video/{id}/unlike endpoint."
 			+ "Once a user likes/unlikes a video, the username should be added to/removed from the "
-			+ "list of users that like that video.", 
-			points = 20.0, 
+			+ "list of users that like that video.",
+			points = 20.0,
 			reference = "This test is derived from the material in these videos: "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/99 "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/121 ")
@@ -204,14 +180,14 @@ public class AutoGradingTest {
 		// Like the video
 		readWriteVideoSvcUser1.likeVideo(v.getId());
 
-		Collection<String> likedby = readWriteVideoSvcUser1.getUsersWhoLikedVideo(v.getId());
+		java.util.Collection<String> likedby = readWriteVideoSvcUser1.getUsersWhoLikedVideo(v.getId());
 
 		// Make sure we're on the list of people that like this video
 		assertTrue(likedby.contains(USERNAME1));
-		
+
 		// Have the second user like the video
 		readWriteVideoSvcUser2.likeVideo(v.getId());
-		
+
 		// Make sure both users show up in the like list
 		likedby = readWriteVideoSvcUser1.getUsersWhoLikedVideo(v.getId());
 		assertTrue(likedby.contains(USERNAME1));
@@ -225,17 +201,17 @@ public class AutoGradingTest {
 
 		// Make sure user1 is not on the list of people that liked this video
 		assertTrue(!likedby.contains(USERNAME1));
-		
+
 		// Make sure that user 2 is still there
 		assertTrue(likedby.contains(USERNAME2));
 	}
 
-	@Rubric(value = "A user is only allowed to like a video once.", 
+	@Rubric(value = "A user is only allowed to like a video once.",
 			goal = "The goal of this evaluation is to ensure that your Spring application "
 			+ "restricts users to liking a video only once. "
 			+ "This test simply attempts to like a video twice and then checks that "
-			+ "the like count is only 1.", 
-			points = 20.0, 
+			+ "the like count is only 1.",
+			points = 20.0,
 			reference = "This test is derived from the material in these videos: "
 					+ "https://class.coursera.org/mobilecloud-001/lecture/99 "
 					+ "https://class.coursera.org/mobilecloud-001/lecture/121"
@@ -272,12 +248,12 @@ public class AutoGradingTest {
 		assertTrue(v.getLikes() == 1);
 	}
 
-	@Rubric(value = "A user cannot like a non-existant video", 
+	@Rubric(value = "A user cannot like a non-existant video",
 			goal = "The goal of this evaluation is to ensure that your Spring application "
 			+ "won't crash if a user attempts to like a non-existant video. "
 			+ "This test simply attempts to like a non-existant video then checks "
-			+ "that a 404 Not Found response is returned.", 
-			points = 20.0, 
+			+ "that a 404 Not Found response is returned.",
+			points = 20.0,
 			reference = "This test is derived from the material in these videos: "
 					+ "https://class.coursera.org/mobilecloud-001/lecture/99 "
 					+ "https://class.coursera.org/mobilecloud-001/lecture/121"
@@ -296,10 +272,10 @@ public class AutoGradingTest {
 		}
 	}
 
-	@Rubric(value = "A user can find a video by providing its name", 
+	@Rubric(value = "A user can find a video by providing its name",
 			goal = "The goal of this evaluation is to ensure that your Spring application "
-			+ "allows users to find videos by searching for the video's name.", 
-			points = 20.0, 
+			+ "allows users to find videos by searching for the video's name.",
+			points = 20.0,
 			reference = "This test is derived from the material in these videos: "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/97 "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/99 ")
@@ -338,11 +314,11 @@ public class AutoGradingTest {
 	/**
 	 * Test finding a video by its duration.
 	 */
-	@Rubric(value = "A user can find videos that have a duration less than a certain value.", 
+	@Rubric(value = "A user can find videos that have a duration less than a certain value.",
 			goal = "The goal of this evaluation is to ensure that your Spring application "
 			+ "allows users to find videos by searching for videos with a duration "
-			+ "less that a specified value.", 
-			points = 20.0, 
+			+ "less that a specified value.",
+			points = 20.0,
 			reference = "This test is derived from the material in these videos: "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/97 "
 			+ "https://class.coursera.org/mobilecloud-001/lecture/99 ")
@@ -391,6 +367,21 @@ public class AutoGradingTest {
 			nonExistantId++;
 		}
 		return nonExistantId;
+	}
+
+	private class ErrorRecorder implements ErrorHandler {
+
+		private RetrofitError error;
+
+		@Override
+		public Throwable handleError(RetrofitError cause) {
+			error = cause;
+			return error.getCause();
+		}
+
+		public RetrofitError getError() {
+			return error;
+		}
 	}
 
 }
